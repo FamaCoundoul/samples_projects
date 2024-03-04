@@ -11,7 +11,7 @@ RUN docker-php-ext-install \
         xml
 
 # Installation dans votre image de Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 # Installation dans votre image de NodeJS
 RUN apk add nodejs npm
